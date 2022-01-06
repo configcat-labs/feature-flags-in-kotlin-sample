@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/just_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:text="The greatest day for"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#6C4915"
+        android:textSize="15dp"></TextView>
+
+    <TextView
+        android:id="@+id/coffee_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/just_text"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/unna"
+        android:text="Coffee"
+        android:textAlignment="center"
+        android:textColor="#FCFDFD"
+        android:letterSpacing="0.1"
+        android:textSize="50dp"></TextView>
+
+
+    <ImageView
+        android:id="@+id/launcher_image_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ImageView>
+
+    <Button
+        android:id="@+id/launch_app_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/round_button"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="ORDER NOW"></Button>
+
+</RelativeLayout>

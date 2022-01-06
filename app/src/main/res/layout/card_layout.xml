@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:id="@+id/cardview"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/coffeecup"></ImageView>
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@id/item_image"
+            android:fontFamily="@font/swanky_and_moo_moo"
+            android:text="Vanilla Flurry Coffee"
+            android:textSize="22dp"></TextView>
+
+        <TextView
+            android:id="@+id/item_ingredients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_title"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/item_image"
+            android:text="Coffee, Skimmed Milk, Onions"></TextView>
+
+        <TextView
+            android:id="@+id/item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_ingredients"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/swanky_and_moo_moo"
+            android:text="100 RON"
+            android:textColor="#91682B"
+            android:textSize="25dp"></TextView>
+
+        <TextView
+            android:id="@+id/item_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_ingredients"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/swanky_and_moo_moo"
+            android:text="Buy for"
+            android:textColor="#91682B"
+            android:textSize="25dp"></TextView>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.9dp"
+        android:layout_below="@id/relativelayout"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="#1E150B"/>
+
+</RelativeLayout>

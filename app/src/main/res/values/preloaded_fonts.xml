@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/exo_extralight</item>
+        <item>@font/gruppo</item>
+        <item>@font/just_me_again_down_here</item>
+        <item>@font/raleway</item>
+        <item>@font/swanky_and_moo_moo</item>
+        <item>@font/unna</item>
+    </array>
+</resources>
