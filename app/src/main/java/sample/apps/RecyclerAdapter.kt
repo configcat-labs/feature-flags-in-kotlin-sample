@@ -11,9 +11,9 @@ import com.configcat.*
 class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     private var titles =
-        arrayOf("Velvet Creamy Vanilla Frappucino", "Strawberry Milkshake",
-            "Salted Caramel Macchiato", "Dark Cherry Milkshake", "Hot Coffee",
-            "Peach Iced Tea with Lemon", "Chocolate Chip Cookie")
+        arrayOf("Velvet Frappucino", "Strawberry Milkshake",
+            "Caramel Macchiato", "Watermelon Fresh", "Hot Coffee",
+            "Peach Iced Tea", "Choc Frappucino")
     private var ingredients =
         arrayOf("coffee, heavy cream, vanilla syrup, sugar",
             "strawberry syrup, strawberries, milk, sugar, vanilla extract",
@@ -23,17 +23,17 @@ class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
             "peach, ice, water, sugar",
             "flour, sugar, choc chips, butter, eggs, baking agent")
     private var prices =
-        arrayOf("11$", "9$", "12$", "10$", "5$", "8$", "10$")
+        arrayOf("11$", "19$", "12$", "10$", "15$", "18$", "10$")
     private val images =
-        intArrayOf(R.drawable.item10, R.drawable.item11,
-            R.drawable.item16, R.drawable.item17, R.drawable.item6, R.drawable.item20,
-        R.drawable.item23)
+        intArrayOf(R.drawable.item7, R.drawable.item2,
+            R.drawable.item16, R.drawable.item4, R.drawable.item10, R.drawable.item17,
+        R.drawable.item8)
 
     private var titlesH =
-        arrayOf("Hot Coffee Christmas Specials",
-            "Snickers Milkshake Christmas Specials", "Salted Brownies",
-            "Bounty Milkshake Christmas Specials", "Oreo Milkshake Christmas Specials",
-            "Chocolate Chip Cookie", "Chocolate Frapuccino Christmas Specials")
+        arrayOf("Coffee Christmas",
+            "Snickers Milkshake", "Milk Coffee",
+            "Hot Choc", "Oreo Milkshake",
+            "Christmas Flurry", "Chocolate Frapuccino")
     private var ingredientsH =
         arrayOf("coffee, sugar, water, heavy cream",
             "snickers chunks, milk, sugar, vanilla extract, heavy cream, choc syrup",
@@ -43,11 +43,11 @@ class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
             "flour, sugar, choc chips, butter, eggs, baking agent",
             "coffee, sugar, water, heavy cream, milk, chocolate syrup")
     private var pricesH =
-        arrayOf("5$", "12$", "15$", "13$", "11$", "10$", "12$")
+        arrayOf("15$", "12$", "15$", "13$", "11$", "10$", "12$")
     private val imagesH =
-        intArrayOf(R.drawable.item6, R.drawable.item25,
-            R.drawable.item21, R.drawable.item14, R.drawable.item15, R.drawable.item23,
-            R.drawable.item19)
+        intArrayOf(R.drawable.item30, R.drawable.item11,
+            R.drawable.item31, R.drawable.item32, R.drawable.item6, R.drawable.item30,
+            R.drawable.item32)
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapter.ViewHolder {
@@ -59,7 +59,7 @@ class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
         val sdk = holder.itemTitle.context.getString(R.string.sdk)
         val client = ConfigCatClient(sdk)
-        val holiday = client.getValue(Boolean::class.java, "holiday", false)
+        var holiday = client.getValue(Boolean::class.java, "holiday", false)
 
         if(holiday) {
             holder.itemTitle.text = titlesH[position]

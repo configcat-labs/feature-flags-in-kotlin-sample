@@ -52,6 +52,7 @@ dependencies {
     implementation 'com.configcat:configcat-android-client:6.+'
     implementation 'org.slf4j:slf4j-android:1.+'
     implementation "com.airbnb.android:lottie:3.4.0"
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
 
 }
